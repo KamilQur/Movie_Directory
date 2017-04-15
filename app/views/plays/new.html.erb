@@ -1,0 +1,30 @@
+ <h1>Creating new Movie</h1> 
+
+<%= simple_form_for @play do |f| %>
+<%= select_tag(:category_id, options_for_select(@categories),:prompt => "Select Category") %> 
+<h3>Image:</h3> 
+<%= f.file_field :play_img %> 
+  <%= f.input :title ,label: "Movie title"%>  
+  <%= f.input :description %> 
+  <%= f.input :director %>
+  <%= f.input :videourl %>
+  <%= f.button :submit %>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
