@@ -10,7 +10,7 @@
 <% @plays.each do |play| %>
 <div class="col-md-3">
  <h3><%=play.title %></h3> 
- <a href="/plays/<%= play.id %>">
+ <a href="/plays/<%= play.id %>"> 
  <%= image_tag play.play_img.url(:medium),class: "play" %>    
  </a>
  </div> 

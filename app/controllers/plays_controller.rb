@@ -13,7 +13,7 @@ before_action :authenticate_user!,only:[:new,:edit]
 
 
 	def new       
-     @play = current_user.plays.build  
+     @play = current_user.plays.build        
      # @play = Play.new  
      @categories = Category.all.map{|c| [c.name,c.id]}
 	end 
@@ -51,14 +51,14 @@ before_action :authenticate_user!,only:[:new,:edit]
      if @play.save 
        redirect_to root_path
    else
-   	render 'new' 
+   	render 'new'  
      end 	
    end  
 
 
  private 
  def play_params    
-   params.require(:play).permit(:title,:description,:director,:category_id,:play_img,:videourl)
+   params.require(:play).permit(:title,:description,:director,:category_id,:play_img,:videourl,:image)
 
  end 
 
